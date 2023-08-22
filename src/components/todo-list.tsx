@@ -62,6 +62,11 @@ export const TodoList = ({
       </form>
 
       <div className="space-y-3">
+        {getTodos.data.length === 0 && (
+          <div className="text-center text-muted-foreground font-medium mt-4">
+            No todo added!
+          </div>
+        )}
         {getTodos?.data?.map((todo) => (
           <div key={todo.id} className="flex justify-between items-center">
             <div className="flex items-center gap-4">
